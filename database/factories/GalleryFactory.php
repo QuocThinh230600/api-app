@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class GalleryFactory extends Factory
 {
+    private static $counter = 1;
     /**
      * Define the model's default state.
      *
@@ -16,8 +17,15 @@ class GalleryFactory extends Factory
      */
     public function definition(): array
     {
+        $number = self::$counter++;
+
         return [
-            //
+            'name' => fake()->name(),
+            'photo' => fake()->image(),
+            'description' => fake()->paragraph(3),
+            'size' => '100x100',
+            'status' => 'on',
+            'user_id' => '1',
         ];
     }
 }

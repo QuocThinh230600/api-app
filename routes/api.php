@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\News;
 
 
 /*
@@ -47,4 +48,14 @@ Route::get('/category', function (Request $request) {
 Route::post('/category', function (Request $request) {
     $categorys = Category::all();
     return response()->json($categorys);
+});
+
+Route::get('/news', function (Request $request) {
+    $news = News::all();
+    return response()->json($news);
+});
+
+Route::post('/news', function (Request $request) {
+    $news = News::all();
+    return response()->json($news);
 });

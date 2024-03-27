@@ -21,6 +21,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\CategoryProduct::factory(50)->create();
         \App\Models\Permission::factory(50)->create();
         \App\Models\PermissionRole::factory(50)->create();
+        \App\Models\Gallery::factory(10)->create();
+        \App\Models\News::factory(10)->create();
+
 
     }
 }
