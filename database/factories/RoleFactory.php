@@ -22,7 +22,7 @@ class RoleFactory extends Factory
 
         return [
             'name' => $name,
-            'status' => 'on',
+            'status' => '1',
             'user_id' => '1',
         ];
     }

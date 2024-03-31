@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\UserInfo::factory(50)->create();
         \App\Models\UserRole::factory(50)->create();
         \App\Models\Category::factory(10)->create();
+        \App\Models\Produce::factory(50)->create();
         \App\Models\Product::factory(50)->create();
         \App\Models\CategoryProduct::factory(50)->create();
         \App\Models\Permission::factory(50)->create();

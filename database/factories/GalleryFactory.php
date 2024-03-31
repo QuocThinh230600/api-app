@@ -24,7 +24,7 @@ class GalleryFactory extends Factory
             'photo' => fake()->image(),
             'description' => fake()->paragraph(3),
             'size' => '100x100',
-            'status' => 'on',
+            'status' => rand(0, 1),
             'user_id' => '1',
         ];
     }

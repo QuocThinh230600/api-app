@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
@@ -22,14 +24,17 @@ class ProductFactory extends Factory
 
         return [
             'name' => $name,
+            'slug' => Str::slug($name),
             'top_content' => fake()->paragraph(10),
             'description' => fake()->paragraph(20),
             'value' => fake()->numberBetween(1, 5),
+            'price' => fake()->numberBetween(0, 100000),
             'shrot_description' => fake()->paragraph(10),
             'image' => fake()->image(),
             'user_id' => rand(1, 50),
             'category_id' => rand(1, 4),
-            'status' => 'on',
+            'produce_id' => rand(1, 50),
+            'status' => rand(0, 1),
         ];
     }
 }

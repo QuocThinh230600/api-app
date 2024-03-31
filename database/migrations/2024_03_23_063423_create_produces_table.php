@@ -14,10 +14,8 @@ return new class extends Migration
         Schema::create('produces', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->longText('top_content');
-            $table->longText('description');
-            $table->longText('bottom_content');
-            $table->string('image');
+            $table->string('address');
+            $table->string('phone');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('status')->default('on');
             $table->softDeletes();

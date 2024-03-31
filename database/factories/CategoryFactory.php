@@ -24,7 +24,7 @@ class CategoryFactory extends Factory
             'parent_id' => '0',
             'image' => fake()->image(),
             'status' => 'on',
-            'user_id' => rand(1, 50)
+            'user_id' => '1'
         ];
     }
 }

@@ -18,7 +18,7 @@ class PermissionFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'status' => 'on',
+            'status' => rand(0, 1),
             'user_id' => '1'
         ];
     }

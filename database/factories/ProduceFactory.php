@@ -17,7 +17,11 @@ class ProduceFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'address' => fake()->address(),
+            'phone' => fake()->phoneNumber(),
+            'user_id' => '1',
+            'status' => rand(0, 1)
         ];
     }
 }

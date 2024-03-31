@@ -24,7 +24,7 @@ class NewsFactory extends Factory
             'image' => fake()->image(),
             'user_id' => '1',
             'category_id' => fake()->numberBetween(5, 10),
-            'status' => 'on'
+            'status' => rand(0, 1)
         ];
     }
 }
