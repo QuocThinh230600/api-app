@@ -38,7 +38,7 @@ Route::get('/product', function (Request $request) {
 });
 
 Route::post('/product', function (Request $request) {
-    $products = Product::select('name', 'price', 'status', 'slug')->get();
+    $products = Product::select('name', 'price', 'slug')->where('status' == 0)->get();
     return response()->json($products);
 });
 

@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
@@ -17,13 +19,14 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
-        $category = 'category-' . self::$counter++;
+        $name = 'category-' . self::$counter++;
 
         return [
-            'name' => $category,
+            'name' => $name,
+            'slug' => Str::slug($name),
             'parent_id' => '0',
             'image' => fake()->image(),
-            'status' => 'on',
+            'status' => rand(0,1),
             'user_id' => '1'
         ];
     }
